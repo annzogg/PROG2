@@ -9,8 +9,8 @@
         <h1>Bag Packer - Projektidee Ann Zogg</h1>
         
 <h2>Ausgangslage</h2>
-        <p></p>
-        <p>Es kennt wohl jeder: Man geht in die Ferien und hat bestimmt noch etwas vergessen, was nun nachgekauft werden muss und damit nur unnötig Geld ausgegeben wird. Ebenfalls wurde das Wetter nicht bereits im Vorhinein </p>
+        <p>Es kennt wohl jeder: Man geht in die Ferien und hat bestimmt noch etwas vergessen, was nun nachgekauft werden muss und damit nur unnötig Geld ausgegeben wird. Ebenfalls wurde das Wetter nicht bereits im Vorhinein angeschaut</p>
+
 
 <h2>Ideevorschlag: </h2>
         <p> Die App "Bag Packer" stellt anhand der, von der Person ausgewählten Kriterien, eine Liste der Dinge zusammen, die im Urlaub nicht vergessen werden sollten und auf jeden Fall in den Koffer/Rucksack müssen. Die Grundausstattung für das Gespäck wird zurückgegeben, wobei die geographische Lage des Zielortes, die Jahreszeit und innerhalbt eines kurzen Zeitraums auch den Wetterbericht der Zielorts berücksichtigt wird.</p>
