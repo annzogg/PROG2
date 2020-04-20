@@ -30,9 +30,7 @@
     	<p>Ausgabe</p> 
     	<li>
     		<ol>Packliste mit den berücksichtigten Aktivitätskriterien</ol>
-			<ol>Wetterangabe</ol>
-    		<ol>Vorschläge für mögliche Impfung</ol>
-    		<ol>Wäschemöglichkeiten</ol>
+
     	</li>    
     </body>
 </html>
