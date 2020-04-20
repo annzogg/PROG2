@@ -24,9 +24,8 @@
     	<p>Datenverarbeitung</p>
     	<li><ol>Berücksichtigung der Aktivitäten</ol>
     	<p>Ausgabe</p> 
-    	<li>
-    		<ol>Packliste mit den berücksichtigten Aktivitätskriterien</ol>
-
-    	</li>    
+    	<ol>
+    		<li>Packliste mit den berücksichtigten Aktivitätskriterien</ol>
+</ol>    
     </body>
 </html>
