@@ -17,17 +17,18 @@
 
 <p>Enthaltene Auswahlkritierien in der App: </p>
     	<ul>
-            <li>Reiseort</li
+            <li>Reiseort</li>
     	    <li>Dauer der Reise</li>   
     	    <li>Geschäftlich oder Urlaub</li> 
     <br>
     	<p>Datenverarbeitung</p>
-    	<ol>
+    	<ul>
             <li>Berücksichtigung der Aktivitäten</li>
+    </ul>
     <br>
     	<p>Ausgabe</p> 
-    	<ol>
-    		<li>Packliste mit den berücksichtigten Aktivitätskriterien</ol>
-</ol>    
+    	<ul>
+    		<li>Packliste mit den berücksichtigten Aktivitätskriterien</li>
+</ul>    
     </body>
 </html>
