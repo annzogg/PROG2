@@ -2,7 +2,7 @@
 <html lang="de">
     <head>
         <meta charset="utf-8">
-        <title>Projektvorschlag</title>
+        <titel>Projektvorschlag</titel>
         <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
