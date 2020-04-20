@@ -16,11 +16,9 @@
         <p> Die App "Bag Packer" stellt anhand der, von der Person ausgewählten Kriterien, eine Liste der Dinge zusammen, die im Urlaub nicht vergessen werden sollten und auf jeden Fall in den Koffer/Rucksack müssen. Die Grundausstattung für das Gespäck wird zurückgegeben wird.</p>
 
 <p>Enthaltene Auswahlkritierien in der App: </p>
-    	<li>
-    		<ol>Reiseort</ol>
-    		<ol>Dauer der Reise</ol>   
-    		<ol>Geschäftlich oder Urlaub</ol> 
-    	</li> 
+    	<li>Reiseort</li
+    	<li>Dauer der Reise</li>   
+    	<li>Geschäftlich oder Urlaub</li> 
     	<p>Datenverarbeitung</p>
     	<li><ol>Berücksichtigung der Aktivitäten</ol>
     	<p>Ausgabe</p> 
