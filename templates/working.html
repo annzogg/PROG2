@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Startseite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/jquery-3.4.1.slim.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/popper.min.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+    
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light "style="background-color: #e3f2fd;">
+       <a class="navbar-brand text-info" href="http://127.0.0.1:5000/start/">
+        <img src="{{ url_for('static', filename='pictures/bag.png')}}
+" width="40" height="40" class="d-inline-block align-center" alt="bag" href="#">Bagpacker</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="http://127.0.0.1:5000/start/">Neuer Trip <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="#">Gespeicherte Trips <span class="sr-only">(current)</span></a>
+      </li>
+     
+    </ul>
+  </div>
+</nav>
+
+  <!-- End of navigation -->
+  <div class="w-auto p-2" style="background-color: #D6E1FE;">
+  <h4 class="m-4 text-center">Aktivitäten</h4>
+</div>
+
+
+<div class="card-deck m-3" style="text-align: center;">
+   <div class="card m-4" style=" width: 14rem;">
+    <label class="image-checkbox">
+       <img src="{{ url_for('static', filename='pictures/working.png')}}" class="card-img-top p-5" alt="arbeit">
+       <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+
+    <label class="custom-control-label" for="defaultUnchecked">Arbeit</label>
+</div>
+    </label>
+   </div>
+  <div class="card m-4" style=" width: 14rem;">
+         <label class="image-checkbox">
+       <img src="{{ url_for('static', filename='pictures/international.png')}}" class="card-img-top p-5" alt="International">
+       <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+    <label class="custom-control-label" for="defaultUnchecked">International</label>
+  </label>
+      </div>
+   </div>
+   <div class="w-100 d-none d-sm-block d-md-none">
+      <!-- wrap every 2 on sm-->
+   </div>
+   <div class="card m-4" style=" width: 14rem;">
+    <label class="image-checkbox">
+       <img src="{{ url_for('static', filename='pictures/formal.png')}}" class="card-img-top p-5" alt="formal">
+       <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+    <label class="custom-control-label" for="defaultUnchecked">Business Formal</label>
+</div>
+    </label>
+   </div>
+   <div class="w-100 d-none d-md-block d-lg-none">
+      <!-- wrap every 3 on md-->
+   </div>
+   <div class="card m-4" style=" width: 14rem;">
+    <label class="image-checkbox">
+       <img src="{{ url_for('static', filename='pictures/dinner2.png')}}" class="card-img-top p-5" alt="dinner">
+       <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+
+    <label class="custom-control-label" for="defaultUnchecked">Dinner</label>
+</div>
+    </label>
+   </div>
+   <div class="w-100 d-none d-sm-block d-md-none">
+      <!-- wrap every 2 on sm-->
+   </div>
+
+   <div class="card m-4" style=" width: 14rem;">
+    <label class="image-checkbox">
+       <img src="{{ url_for('static', filename='pictures/casual.png')}}" class="card-img-top p-5"  alt="casual">
+       <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+
+    <label class="custom-control-label" for="defaultUnchecked">Business Casual</label>
+</div>
+    </label>
+   </div>
+   <div class="w-100 d-none d-xl-block">
+   </div>
+ </div>
+
+
+ <!-- Persönliche Liste erstellen-->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Persönlich</li>
+  </ol>
+</nav>
+ 
+
+<div class="card-deck m-3" style="width: 15rem; align-content: center">
+   <div class="card p-4" >
+    <label class="image-checkbox">
+       <img src="{{ url_for('static', filename='pictures/persoenlich.png')}}" class="pb-3" style="width: 100%;"   alt="custom">
+       <div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+
+    <label class="custom-control-label" for="defaultUnchecked">Persönliche Liste hinzufügen</label>
+</div>
+    </label>
+   </div>
+</div>
+
+ <!-- Ende Persönliche Liste erstellen-->
+
+   <!-- Packing beginnen-->
+<button type="button" class="btn btn-warning btn-lg btn-block" style="height: 4rem;">Beginne zu packen -> </button>
+
+   </body>
+</html>
