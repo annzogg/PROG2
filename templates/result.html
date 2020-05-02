@@ -38,9 +38,9 @@
     
         <div class="result-center m-4">
         <section id="content">
-            <h2 class="documentation">Unterlagen</h2>
+            <h2 class="unterlagen">Unterlagen</h2>
                 <ul class="list-group">
-                    {% for element in unterlagen %}
+                    {% for element in items["unterlagen"] %}
                     <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
                     {% endfor %}
         <div class="input-group mb-3">
@@ -51,35 +51,12 @@
         </div>
                 </ul>
         </section>
-        <section id="middle">
-            <h2 class="bathroom">Hygieneartikel</h2>
+        <section id="hygieneartikel">
+            <h2 class="hygieneartikel">Hygieneartikel</h2>
                 <ul class="list-group">
-                     <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Sonnencreme</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Zahnbürste & Zahnpaste</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Gesichtsreiniger</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Tagescreme</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Nachtcreme</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Wattestäbchen</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Pinzette</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Nagelklipser</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Deodorant</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Shampoo</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Conditioner</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Seife/Körper Waschlotion</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Wäschesack</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Haarbürste</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Föhn</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Nastücher</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Bodylotion</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Badetuch</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Lippenpomaden</li>
-                <div id="male-products">
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Rasierer</li>
-                </div>
-                <div id="female-products">
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Schminkartikel</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Parfüm</li>
-                </div>
+                    {{% for element in items["hygieneartikel"] %}
+                     <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
+                    {% endfor %}
                 <div class="input-group mb-3">
                     <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
                     <div class="input-group-append">
@@ -88,27 +65,28 @@
                 </div>
                 </ul>
         </section>
-        <section id="sidebar">
-            <h2 class="clothes">Kleider</h2>
-                <ul class="list-group">
-                    <div class="female-products">
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Unterwäsche</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Socken</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp Nachtwäsche</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp Gürtel</li>
-
-                       
+        <section id="elektronik">
+                <h2 class="elektronik">Elektronik</h2>
+                    <ul class="list-group"> 
+                        {% for element in items["elektronik"] %}
+                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
+                        {% endfor %}
+                        <div class="input-group mb-3">
+                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
+                        </div>
                     </div>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Casual Shirts/T-shirts</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Casual Hose/Shorts</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Pajamas</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Sweaters</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Casual Schuhe/Sandalen</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Kleid Schuhe</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Hut/Schal/Sonnenbrille</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Jacke/Mantel/Sweaters</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Bikini/Badehose</li>
+                    </ul>
+                    </section>
 
+
+        <section id="kleider">
+            <h2 class="kleider">Kleider</h2>
+                <ul class="list-group">
+                    {% for element in items["kleider"] %}
+                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
+                       {% endfor %}
                     <div class="input-group mb-3">
                         <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
                         <div class="input-group-append">
@@ -117,36 +95,12 @@
                     </div>
                 </ul>
         </section>
-        <section id="middle-2">
-                <h2 class="technology">Elektronik</h2>
-                    <ul class="list-group"> 
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Handy</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Handy Ladegerät</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Kamera</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Kamera Ladegerät</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Laptop</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Laptop Ladegerät</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Kopfhörer</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Adapter</li>
-                        <div class="input-group mb-3">
-                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                        </div>
-                    </div>
-                    </ul>
-        </section>
-        <section id="sidebar-2">
-                <h2 id="before">Business Casual</h2>
+        <section id="arbeit">
+                <h2 id="arbeit">Arbeit</h2>
                     <ul class="list-group">
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Anzugsjacke</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Hemd</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Anzugshose</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Anzugsschuhe</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Anzugsgürtel</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Mantel</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Aktentasche</li>
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Schmuck</li>
+                        {% for element in items["arbeit"] %}
+                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
+                        {% endfor %}
                         <div class="input-group mb-3">
                             <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
                             <div class="input-group-append">
@@ -155,21 +109,45 @@
                         </div>
                     </ul>
         </section>
-        <section id="hiking">
-            <h2 class="hiking">Wandern</h2>
+
+
+        <section id="bformal">
+                <h2 id="bformal">Business Formal</h2>
+                    <ul class="list-group">
+                        {% for element in items["bformal"] %}
+                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
+                        {% endfor %}
+                        <div class="input-group mb-3">
+                            <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                            <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
+                            </div>
+                        </div>
+                    </ul>
+        </section>
+        
+        <section id="international-2">
+                <h2 id="international">International</h2>
+                    <ul class="list-group">
+                        {% for element in items["international"] %}
+                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
+                        {% endfor %}
+                        <div class="input-group mb-3">
+                            <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                            <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
+                            </div>
+                        </div>
+                    </ul>
+        </section>
+
+        <section id="wandern">
+            <h2 class="wandern">Wandern</h2>
                 <ul class="list-group">
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp Wanderschuhe</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Wanderhosen</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp Wander T-Shirt</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential"> &nbsp Wandersocken</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential"> &nbsp Jacke/Windstopper</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential"> &nbsp Mütze</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential"> &nbsp Trinkflasche</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential"> &nbsp Rucksack</li>
-                    
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential"> &nbsp erste Hilfe Ausrüstung</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential"> &nbsp Taschenlampe</li>
-                
+                    {% for element in items["wandern"] %}
+                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
+
+                {% endfor %}
                     <div class="input-group mb-3">
                         <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
                         <div class="input-group-append">
@@ -179,16 +157,12 @@
                 </ul>
         </section>
 
-        <section id="running">
-            <h2 class="running">Joggen</h2>
+        <section id="joggen">
+            <h2 class="joggen">Joggen</h2>
                 <ul class="list-group">
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp Laufschuhe</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp Laufhosen</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp Lauf T-Shirt</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential"> &nbsp Laufsocken</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential"> &nbsp Jacke/Windstopper</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential"> &nbsp Trinkflasche</li>
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential"> &nbsp Sporttuch</li>
+                    {% for element in items["joggen"] %}
+                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
+                    {% endfor %}
                     <div class="input-group mb-3">
                         <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
                         <div class="input-group-append">
@@ -198,14 +172,96 @@
                 </ul>
         </section>
 
+        <section id="biken">
+            <h2 class="biken">Biken</h2>
+                <ul class="list-group">
+                    {% for element in items["biken"] %}
+                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
+                    {% endfor %}
+                    <div class="input-group mb-3">
+                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
+                        </div>
+                    </div>
+                </ul>
+        </section>
+        <section id="camping">
+            <h2 class="camping">Camping</h2>
+                <ul class="list-group">
+                    {% for element in items["camping"] %}
+                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
+                    {% endfor %}
+                    <div class="input-group mb-3">
+                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
+                        </div>
+                    </div>
+                </ul>
+        </section>
+        <section id="strand">
+            <h2 class="strand">Strand</h2>
+                <ul class="list-group">
+                    {% for element in items["strand"] %}
+                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
+                    {% endfor %}
+                    <div class="input-group mb-3">
+                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
+                        </div>
+                    </div>
+                </ul>
+        </section>
+        <section id="nachtessen">
+            <h2 class="nachtessen">Nachtessen</h2>
+                <ul class="list-group">
+                    {% for element in items["nachtessen"] %}
+                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
+                    {% endfor %}
+                    <div class="input-group mb-3">
+                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
+                        </div>
+                    </div>
+                </ul>
+        </section>
+        <section id="fitness">
+            <h2 class="fitness">Fitness</h2>
+                <ul class="list-group">
+                    {% for element in items["fitness"] %}
+                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
+                    {% endfor %}
+                    <div class="input-group mb-3">
+                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
+                        </div>
+                    </div>
+                </ul>
+        </section>
+        <section id="foto">
+            <h2 class="foto">Fotografie</h2>
+                <ul class="list-group">
+                    {% for element in items["foto"] %}
+                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
+                    {% endfor %}
+                    <div class="input-group mb-3">
+                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
+                        </div>
+                    </div>
+                </ul>
+        </section>
     </div>
     
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  
 </body>
-<script src="add.js"></script>
+
 
 
 </html>
