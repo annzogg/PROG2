@@ -11,162 +11,120 @@
     
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light "style="background-color: #e3f2fd;">
-       <a class="navbar-brand text-info" href="http://127.0.0.1:5000/start/">
+    <nav class="navbar navbar-expand-lg navbar-light "style="background-color: #e3f2fd;">
+      <a class="navbar-brand text-info" href="http://127.0.0.1:5000/start/">
         <img src="{{ url_for('static', filename='pictures/bag.png')}}
-" width="40" height="40" class="d-inline-block align-center" alt="bag" href="#">Bagpacker</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="http://127.0.0.1:5000/start/">Neuer Trip <span class="sr-only">(current)</span></a>
-      </li>
-       <li class="nav-item active">
-        <a class="nav-link" href="#">Gespeicherte Trips <span class="sr-only">(current)</span></a>
-      </li>
-     
-    </ul>
-  </div>
-</nav>
+      " width="40" height="40" class="d-inline-block align-center" alt="bag" href="#">Bagpacker</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:5000/start/">Neuer Trip <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:5000/gespeicherte_trips/">Gespeicherte Trips <span class="sr-only">(current)</span></a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
     <!-- End of navigation -->
-
-<div class="w-auto p-2" style="background-color: #D6E1FE;">
-  <div class="container d-inline-block m-2 h5">Ortschaft</div>
-    </div>
-
-
-<div class="input-group input-group-lg">
-  <div class="input-group-prepend">
-    <span class="input-group-text" style="background-color: #D6E1FE;" id="inputGroup-sizing-lg">Ort</span>
-  </div>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-</div>
-
-<div class="w-auto p-2" style="background-color: #D6E1FE;">
-  <div class="container d-inline-block m-2 pt-3 h5">Datum der Reise</div>
-    </div>
-
-
-<div class="input-group mb-auto">
-  <div class="input-group-prepend">
-  <select class="custom-select" id="inputGroupSelect02">
-    <option selected>Tag</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
-    <option value="11">11</option>
-    <option value="12">12</option>
-    <option value="13">13</option>
-    <option value="14">14</option>
-    <option value="15">15</option>
-    <option value="16">16</option>
-    <option value="17">17</option>
-    <option value="18">18</option>
-    <option value="19">19</option>
-    <option value="20">20</option>
-    <option value="21">21</option>
-    <option value="22">22</option>
-    <option value="23">23</option>
-    <option value="24">24</option>
-    <option value="25">25</option>
-    <option value="26">26</option>
-    <option value="27">27</option>
-    <option value="28">28</option>
-    <option value="29">29</option>
-    <option value="30">30</option>
-    <option value="31">31</option>
-  </select>
-  </div>
-    <select class="custom-select" id="inputGroupSelect02">
-      <option selected>Monat</option>
-      <option value="Januar">Januar</option>
-      <option value="Februar">Februar</option>
-      <option value="März">März</option>
-      <option value="April">April</option>
-      <option value="Mai">Mai</option>
-      <option value="Juni">Juni</option>
-      <option value="Juli">Juli</option>
-      <option value="August">August</option>
-      <option value="September">September</option>
-      <option value="Oktober">Oktober</option>
-      <option value="November">November</option>
-      <option value="Dezember">Dezember</option>
-
-</select>
-</div>
-
-<div class="w-auto p-2" style="background-color: #D6E1FE;">
-  <div class="container d-inline-block m-2 pt-3 h5">Länge der Reise</div>
-    </div>
-
-
-
-
-
-<div class="w-auto p-2" style="background-color: #D6E1FE;">
-  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-  <div class="btn-group" role="group" aria-label="First group">
-    <button type="button" class="btn btn-secondary">1</button>
-    <button type="button" class="btn btn-secondary">2</button>
-    <button type="button" class="btn btn-secondary">3</button>
-    <button type="button" class="btn btn-secondary">4</button>
-    <button type="button" class="btn btn-secondary">5</button>
-    <button type="button" class="btn btn-secondary">6</button>
-    <button type="button" class="btn btn-secondary">7</button>
-    <button type="button" class="btn btn-secondary">8</button>
-    <button type="button" class="btn btn-secondary">9</button>
-    <button type="button" class="btn btn-secondary">10</button>
-    <button type="button" class="btn btn-secondary">11</button>
-    <button type="button" class="btn btn-secondary">12</button>
-    <button type="button" class="btn btn-secondary">13</button>
-    <button type="button" class="btn btn-secondary">14</button>
-    <button type="button" class="btn btn-secondary">15</button>
-    <button type="button" class="btn btn-secondary">16</button>
-    <button type="button" class="btn btn-secondary">17</button>
-    <button type="button" class="btn btn-secondary">18</button>
-    <button type="button" class="btn btn-secondary">19</button>
-    <button type="button" class="btn btn-secondary">20</button>
-    <button type="button" class="btn btn-secondary">21</button>
-  </div>
-</div>
-  <div class="container d-inline-block m-2 pt-3 h5">Art der Reise</div>
-    </div>
-
-
-<div class="card-group">
-  <div class="card">
-    <button type="button" class="btn" data-toggle="tooltip">
-    <img src="{{ url_for('static', filename='pictures/beach.jpg')}}" class="card-img-top" height="300px" alt="strand">
-      <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
-      <h2 class="card-title text-center font-weight-bolder">Urlaub</h2>
-    </div>
-     </button>
-</div>
- 
-  <div class="card">
-    <button type="button" class="btn" data-toggle="tooltip">
-    <img src="{{ url_for('static', filename='pictures/business.jpg')}}" class="card-img-top" height="300px" alt="business">
-    <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
-      <h2 class="card-title text-center font-weight-bolder">Business</h2>
-    </div>
-</button>
-  </div>
-</div>
-
-<a href="http://127.0.0.1:5000/holiday/" class="btn-lg text-center btn-warning btn-block active" role="button" aria-pressed="true">Wähle deine Aktivität aus -></a>
-
-
-
+    <form method="POST">
+      <div class="form-group">
+        <div class="w-auto p-2" style="background-color: #D6E1FE;">
+          <div class="container d-inline-block m-2 h5">Ortschaft</div>
+        </div>
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" style="background-color: #D6E1FE;" id="inputGroup-sizing-lg">Ort</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="ort">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="w-auto p-2" style="background-color: #D6E1FE;">
+          <div class="container d-inline-block m-2 pt-3 h5">Datum der Reise</div>
+        </div>
+        <label for="tag">Tag</label>
+        
+        <div class="input-group mb-auto">
+          <div class="input-group-prepend">
+            <select class="custom-select" id="tag" name="tag">
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+          </div>
+        </div>
+        <label for="monat">Monat</label>
+        <select class="custom-select" name="monat">
+          <option selected value="Januar">Januar</option>
+          <option value="Februar">Februar</option>
+          <option value="März">März</option>
+          <option value="April">April</option>
+          <option value="Mai">Mai</option>
+          <option value="Juni">Juni</option>
+          <option value="Juli">Juli</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="Oktober">Oktober</option>
+          <option value="November">November</option>
+          <option value="Dezember">Dezember</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <div class="w-auto p-2" style="background-color: #D6E1FE;">
+          <div class="container d-inline-block m-2 pt-3 h5">Länge der Reise</div>
+        </div>
+        <div class="w-auto p-2" style="background-color: #D6E1FE;">
+          <label for="monat">Anzahl Tage</label>
+          <select class="custom-select" name="reisedauer_in_tagen">
+            {% for i in range(1, 22): %}
+              <option value="{{i}}">{{i}}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="container d-inline-block m-2 pt-3 h5">Art der Reise</div>
+        <select class="custom-select" name="art_der_reise">
+          <option selected value="urlaub">Urlaub</option>
+          <option value="business">Business</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Wähle deine Aktivität aus -></button>
+    </form>
+    
     
   </body>
 </html>

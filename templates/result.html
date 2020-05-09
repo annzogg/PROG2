@@ -1,267 +1,67 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Startseite</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
-
-    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/jquery-3.4.1.slim.min.js')}}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/popper.min.js')}}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/add.js')}}"></script>
-
-
-    
-  </head>
-  <body>
-      <nav class="navbar navbar-expand-lg navbar-light "style="background-color: #e3f2fd;">
-       <a class="navbar-brand text-info" href="http://127.0.0.1:5000/start/">
-        <img src="{{ url_for('static', filename='pictures/bag.png')}}" width="40" height="40" class="d-inline-block align-center" alt="bag" href="#">Bagpacker</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="http://127.0.0.1:5000/start/">Neuer Trip <span class="sr-only">(current)</span></a>
-      </li>
-       <li class="nav-item active">
-        <a class="nav-link" href="#">Gespeicherte Trips <span class="sr-only">(current)</span></a>
-      </li>
-     
-    </ul>
-  </div>
-</nav>
-    <h1 class="results m-4"> Deine persönliche Packliste: </h1>
-    
-        <div class="result-center m-4">
-        <section id="content">
-            <h2 class="unterlagen">Unterlagen</h2>
-                <ul class="list-group">
-                    {% for element in items["unterlagen"] %}
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
-                    {% endfor %}
-        <div class="input-group mb-3">
-          <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-          </div>
-        </div>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Startseite</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+        <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/jquery-3.4.1.slim.min.js')}}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/popper.min.js')}}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light "style="background-color: #e3f2fd;">
+            <a class="navbar-brand text-info" href="http://127.0.0.1:5000/start/">
+            <img src="{{ url_for('static', filename='pictures/bag.png')}}" width="40" height="40" class="d-inline-block align-center" alt="bag" href="#">Bagpacker</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/start/">Neuer Trip</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/gespeicherte_trips/">Gespeicherte Trips</a>
+                    </li>
+                    
                 </ul>
-        </section>
-        <section id="hygieneartikel">
-            <h2 class="hygieneartikel">Hygieneartikel</h2>
-                <ul class="list-group">
-                    {{% for element in items["hygieneartikel"] %}
-                     <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
-                    {% endfor %}
-                <div class="input-group mb-3">
-                    <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                    <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                    </div>
-                </div>
-                </ul>
-        </section>
-        <section id="elektronik">
-                <h2 class="elektronik">Elektronik</h2>
-                    <ul class="list-group"> 
-                        {% for element in items["elektronik"] %}
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
-                        {% endfor %}
-                        <div class="input-group mb-3">
-                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                        </div>
-                    </div>
-                    </ul>
-                    </section>
-
-
-        <section id="kleider">
-            <h2 class="kleider">Kleider</h2>
-                <ul class="list-group">
-                    {% for element in items["kleider"] %}
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
-                       {% endfor %}
-                    <div class="input-group mb-3">
-                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                        </div>
-                    </div>
-                </ul>
-        </section>
-        <section id="arbeit">
-                <h2 id="arbeit">Arbeit</h2>
-                    <ul class="list-group">
-                        {% for element in items["arbeit"] %}
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
-                        {% endfor %}
-                        <div class="input-group mb-3">
-                            <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                            <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                            </div>
-                        </div>
-                    </ul>
-        </section>
-
-
-        <section id="bformal">
-                <h2 id="bformal">Business Formal</h2>
-                    <ul class="list-group">
-                        {% for element in items["bformal"] %}
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
-                        {% endfor %}
-                        <div class="input-group mb-3">
-                            <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                            <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                            </div>
-                        </div>
-                    </ul>
-        </section>
+            </div>
+        </nav>
+        <h1 class="results m-4"> Deine persönliche Packliste: </h1>
         
-        <section id="international-2">
-                <h2 id="international">International</h2>
-                    <ul class="list-group">
-                        {% for element in items["international"] %}
-                        <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential">&nbsp {{ element }}</li>
-                        {% endfor %}
-                        <div class="input-group mb-3">
-                            <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                            <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
+        <form method="POST">
+            <div class="form-group">
+                <div class="result-center m-4">
+                    <!-- https://www.mattcrampton.com/blog/iterating_over_a_dict_in_a_jinja_template/ -->
+                    {% for key, value in items.items(): %}
+                        <section id="{{key}}">
+                            <h2 class="{{key}}">{{key}}</h2>
+                            <ul class="list-group" id="{{key}}-liste">
+                                {% for element in value %}
+                                    <li class="list-group-item">
+                                        <input type="checkbox" id="listitem" value="{{element}}" name="eintrag">
+                                        <label class="form-check-label" for="listitem">
+                                            {{element}}
+                                        </label>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            <div class="input-group mb-3">
+                                <input id="{{key}}-input" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-info" id="{{key}}-button" type="button">Hinzufügen</button>
+                                </div>
                             </div>
-                        </div>
-                    </ul>
-        </section>
-
-        <section id="wandern">
-            <h2 class="wandern">Wandern</h2>
-                <ul class="list-group">
-                    {% for element in items["wandern"] %}
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
-
-                {% endfor %}
-                    <div class="input-group mb-3">
-                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                        </div>
-                    </div>
-                </ul>
-        </section>
-
-        <section id="joggen">
-            <h2 class="joggen">Joggen</h2>
-                <ul class="list-group">
-                    {% for element in items["joggen"] %}
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
+                        </section>
                     {% endfor %}
-                    <div class="input-group mb-3">
-                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                        </div>
-                    </div>
-                </ul>
-        </section>
-
-        <section id="biken">
-            <h2 class="biken">Biken</h2>
-                <ul class="list-group">
-                    {% for element in items["biken"] %}
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
-                    {% endfor %}
-                    <div class="input-group mb-3">
-                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                        </div>
-                    </div>
-                </ul>
-        </section>
-        <section id="camping">
-            <h2 class="camping">Camping</h2>
-                <ul class="list-group">
-                    {% for element in items["camping"] %}
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
-                    {% endfor %}
-                    <div class="input-group mb-3">
-                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                        </div>
-                    </div>
-                </ul>
-        </section>
-        <section id="strand">
-            <h2 class="strand">Strand</h2>
-                <ul class="list-group">
-                    {% for element in items["strand"] %}
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
-                    {% endfor %}
-                    <div class="input-group mb-3">
-                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                        </div>
-                    </div>
-                </ul>
-        </section>
-        <section id="nachtessen">
-            <h2 class="nachtessen">Nachtessen</h2>
-                <ul class="list-group">
-                    {% for element in items["nachtessen"] %}
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
-                    {% endfor %}
-                    <div class="input-group mb-3">
-                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                        </div>
-                    </div>
-                </ul>
-        </section>
-        <section id="fitness">
-            <h2 class="fitness">Fitness</h2>
-                <ul class="list-group">
-                    {% for element in items["fitness"] %}
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
-                    {% endfor %}
-                    <div class="input-group mb-3">
-                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                        </div>
-                    </div>
-                </ul>
-        </section>
-        <section id="foto">
-            <h2 class="foto">Fotografie</h2>
-                <ul class="list-group">
-                    {% for element in items["foto"] %}
-                    <li class="list-group-item"><input type="checkbox" id="listitem" value="toiletries" name="essential" >&nbsp {{ element }}</li>
-                    {% endfor %}
-                    <div class="input-group mb-3">
-                        <input id="userinput" type="text" class="form-control" placeholder="Artikel..." aria-label="Artikel..." aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                        <button class="btn btn-outline-info" id="enter" type="button">Hinzufügen</button>
-                        </div>
-                    </div>
-                </ul>
-        </section>
-    </div>
-    
-  <!-- Scripts -->
-  
-</body>
-
-
-
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Trip speichern</button>
+        </form>
+        
+        <!-- Scripts -->
+        <script type="text/javascript" src="{{ url_for('static', filename='js/result.js')}}"></script>
+        
+    </body>
 </html>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Startseite</title>
@@ -9,177 +8,92 @@
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/jquery-3.4.1.slim.min.js')}}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/popper.min.js')}}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
-  <title>Vacaymode</title>
-</head>
-
-
-<body>
-      <nav class="navbar navbar-expand-lg navbar-light "style="background-color: #e3f2fd;">
-       <a class="navbar-brand text-info" href="http://127.0.0.1:5000/start/">
-        <img src="{{ url_for('static', filename='pictures/bag.png')}}" width="40" height="40" class="d-inline-block align-center" alt="bag" href="#">Bagpacker</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="http://127.0.0.1:5000/start/">Neuer Trip <span class="sr-only">(current)</span></a>
-      </li>
-       <li class="nav-item active">
-        <a class="nav-link" href="#">Gespeicherte Trips <span class="sr-only">(current)</span></a>
-      </li>
-     
-    </ul>
-  </div>
-</nav>
-
-    <!-- End of navigation -->
-
-<div class="w-auto p-2" style="background-color: #D6E1FE;">
-  <h4 class="m-4 text-center">Aktivitäten</h4>
-</div>
-
-
-<div class="card-deck m-3" style="text-align: center;">
-   <div class="card mb-4">
-    <label class="image-checkbox">
-       <img src="{{ url_for('static', filename='pictures/wandern.png')}}" class="card-img-top p-5" alt="wandern">
-       <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-
-    <label class="custom-control-label" for="defaultUnchecked">Wandern</label>
-</div>
-    </label>
-   </div>
-   <div class="card mb-4">
-         <label class="image-checkbox">
-       <img src="{{ url_for('static', filename='pictures/running.png')}}" class="card-img-top p-5" alt="running">
-       <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-    <label class="custom-control-label" for="defaultUnchecked">Jogging</label>
-  </label>
+    <title>Vacaymode</title>
+    <style type="text/css">
+    .aktivitäten {
+      list-style-type: none !important;
+      padding: 0;
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light "style="background-color: #e3f2fd;">
+      <a class="navbar-brand text-info" href="http://127.0.0.1:5000/start/">
+      <img src="{{ url_for('static', filename='pictures/bag.png')}}" width="40" height="40" class="d-inline-block align-center" alt="bag" href="#">Bagpacker</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:5000/start/">Neuer Trip <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:5000/gespeicherte_trips/">Gespeicherte Trips <span class="sr-only">(current)</span></a>
+          </li>
+          
+        </ul>
       </div>
-   </div>
-   <div class="w-100 d-none d-sm-block d-md-none">
-      <!-- wrap every 2 on sm-->
-   </div>
-   <div class="card mb-4">
-    <label class="image-checkbox">
-       <img src="{{ url_for('static', filename='pictures/velo.png')}}" class="card-img-top p-5" alt="velo">
-       <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-    <label class="custom-control-label" for="defaultUnchecked">Biken</label>
-</div>
-    </label>
-   </div>
-   <div class="w-100 d-none d-md-block d-lg-none">
-      <!-- wrap every 3 on md-->
-   </div>
-   <div class="card mb-4">
-    <label class="image-checkbox">
-       <img src="{{ url_for('static', filename='pictures/camp.png')}}" class="card-img-top p-5" alt="Camping">
-       <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-
-    <label class="custom-control-label" for="defaultUnchecked">Camping</label>
-</div>
-    </label>
-   </div>
-   <div class="w-100 d-none d-sm-block d-md-none">
-      <!-- wrap every 2 on sm-->
-   </div>
-   <div class="w-100 d-none d-lg-block d-xl-none">
-      <!-- wrap every 4 on lg-->
-   </div>
-   <div class="card mb-4">
-    <label class="image-checkbox">
-       <img src="{{ url_for('static', filename='pictures/beach.png')}}" class="card-img-top p-5" alt="Strand">
-       <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-
-    <label class="custom-control-label" for="defaultUnchecked">Strand</label>
-</div>
-    </label>
-   </div>
-   <div class="w-100 d-none d-xl-block">
-      <!-- wrap every 5 on xl-->
-   </div>
-   <div class="card mb-4">
-    <label class="image-checkbox">
-       <img src="{{ url_for('static', filename='pictures/dinner.png')}}" class="card-img-top p-5" alt="Nachtessen">
-       <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-
-    <label class="custom-control-label" for="defaultUnchecked">Nachtessen</label>
-</div>
-    </label>
-   </div>
-   <div class="w-100 d-none d-sm-block d-md-none">
-      <!-- wrap every 2 on sm-->
-   </div>
-   <div class="w-100 d-none d-md-block d-lg-none">
-      <!-- wrap every 3 on md-->
-   </div>
-   <div class="card mb-4">
-    <label class="image-checkbox">
-       <img src="{{ url_for('static', filename='pictures/gym.png')}}" class="card-img-top p-5" alt="Fitness">
-       <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-
-    <label class="custom-control-label" for="defaultUnchecked">Fitness</label>
-</div>
-    </label>
-   </div>
-
-   <div class="card mb-4">
-    <label class="image-checkbox">
-       <img src="{{ url_for('static', filename='pictures/foto.png')}}" class="card-img-top p-5" alt="Fotografie">
-       <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-
-    <label class="custom-control-label" for="defaultUnchecked">Fotografie</label>
-</div>
-    </label>
-   </div>
-
-   <div class="w-100 d-none d-sm-block d-md-none">
-      <!-- wrap every 2 on sm-->
-   </div>
-   <div class="w-100 d-none d-lg-block d-xl-none">
-      <!-- wrap every 4 on lg-->
-   </div>
-  
-
-   <div class="w-100 d-none d-md-block d-lg-none">
-      <!-- wrap every 3 on md-->
-   </div>
-
-</div>
-
-<div>
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Persönlich</li>
-  </ol>
-</div>
- 
-
-<div class="card-deck m-3" style="width: 15rem;">
-   <div class="card p-4" >
-    <label class="image-checkbox">
-       <img src="{{ url_for('static', filename='pictures/persoenlich.png')}}" class="pb-3" style="width: 100%;"   alt="custom">
-       <div class="custom-control custom-checkbox">
-    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-
-    <label class="custom-control-label" for="defaultUnchecked">Persönliche Liste hinzufügen</label>
-</div>
-    </label>
-   </div>
-</div>
-   <!-- Packing beginnen-->
-<button type="button" class="btn btn-warning btn-lg btn-block" style="height: 4rem;">Beginne zu packen -> </button>
-
-
-</body>
-
+    </nav>
+    <!-- End of navigation -->
+    <form method="POST">
+      <div class="w-auto p-2" style="background-color: #D6E1FE;">
+        <h4 class="m-4 text-center">Aktivitäten</h4>
+      </div>
+      <div class="form-group p-4">
+        <ul class="aktivitäten">
+          <li>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="wandern" value="wandern" name="aktivität">
+              <label class="custom-control-label" for="wandern">Wandern</label>
+            </div>
+          </li>
+          <li>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="joggen" value="joggen" name="aktivität">
+              <label class="custom-control-label" for="joggen">Joggen</label>
+            </div>
+          </li>
+          <li>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="biken" value="biken" name="aktivität">
+              <label class="custom-control-label" for="biken">Biken</label>
+            </div>
+          </li>
+          <li>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="camping" value="camping" name="aktivität">
+              <label class="custom-control-label" for="camping">Camping</label>
+            </div>
+          </li>
+          <li>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="strand" value="strand" name="aktivität">
+              <label class="custom-control-label" for="strand">Strand</label>
+            </div>
+          </li>
+          <li>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="nachtessen" value="nachtessen" name="aktivität">
+              <label class="custom-control-label" for="nachtessen">Nachtessen</label>
+            </div>
+          </li>
+          <li>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="fitness" value="fitness" name="aktivität">
+              <label class="custom-control-label" for="fitness">Fitness</label>
+            </div>
+          </li>
+          <li>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="fotografie" value="fotografie" name="aktivität">
+              <label class="custom-control-label" for="fotografie">Fotografie</label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    <button type="submit" class="btn btn-primary mb-2">Beginne zu packen -></button>
+      
+    </form>
+  </body>
 </html>
