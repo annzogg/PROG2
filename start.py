@@ -5,7 +5,9 @@ from flask import redirect
 from flask import url_for
 import json
 
-app = Flask("Demo")
+
+
+app = Flask("Bagpacker")
 neue_reise = {}
 
 def schreibe_daten_in_json(pfad, daten):
@@ -66,34 +68,34 @@ def result(aktivitaeten):
 	global neue_reise
 	print(neue_reise["reisedauer_in_tagen"])
 	items = {
-	"unterlagen": ["Fahrausweis", "Visa/Passport/ID", "Impfausweis", "Flug-/Bahn-/Reiseticket", "Karte", "Reiseführer"],
-	"hygieneartikel": ["Zahnbürste & Zahnpaste", "Gesichtsreiniger", "Tagescreme", "Nachtcreme", "Wattestäbchen", "Pinzette", "Deodorant", "Shampoo und Duschgel", "Wäschesack", "Badetuch", "Nastücher"],
-	"elektronik": ["Handy & Ladegerät", "Kamera & Ladegerät", "Kopfhörer", "Adapter"],
-	"kleider": [neue_reise["reisedauer_in_tagen"] + "x Unterhosen", neue_reise["reisedauer_in_tagen"] + "x Socken", "Pyjama", "Gürtel", neue_reise["reisedauer_in_tagen"]  + "x Bikini/Badehose", "Regenjacke"]
+	"Unterlagen": ["Fahrausweis", "Visa/Passport/ID", "Impfausweis", "Flug-/Bahn-/Reiseticket", "Karte", "Reiseführer"],
+	"Hygieneartikel": ["Zahnbürste & Zahnpaste", "Gesichtsreiniger", "Tagescreme", "Nachtcreme", "Wattestäbchen", "Pinzette", "Deodorant", "Shampoo und Duschgel", "Wäschesack", "Badetuch", "Nastücher"],
+	"Elektronik": ["Handy & Ladegerät", "Kamera & Ladegerät", "Kopfhörer", "Adapter"],
+	"Kleider": [neue_reise["reisedauer_in_tagen"] + "x Unterhosen", neue_reise["reisedauer_in_tagen"] + "x Socken", "Pyjama", "Gürtel", neue_reise["reisedauer_in_tagen"]  + "x Bikini/Badehose", "Regenjacke"]
 	}
 
-	if "joggen" in aktivitaeten:
-		items["joggen"] = ["Laufschuhe", "Laufhosen", "Lauf Shirt", "Jacke / Windstopper", "Trinkflasche", "Sporttuch"]
-	if "wandern" in aktivitaeten:
-		items["wandern"] = ["Wanderschuhe", "Wanderhose", "Wander Shirt", neue_reise["reisedauer_in_tagen"] + "x Wandersocken", "Jacke / Windstopper", "Mütze / Stirnband", "Trinkflasche", "Rucksack", "erste Hilfe Ausrüstung", "Taschenlampe"]
-	if "biken" in aktivitaeten:
-		items["biken"] = ["Bikehose / Bikeshirt", "Bikeschuhe", "Bike / Ort zum Mieten raussuchen", "Trinkflasche", "Bike Handschuhe", "Rucksack", "Sportbrille"]
-	if "camping" in aktivitaeten:
-		items ["camping"] = ["Zelt", "Schlafmatte", "Feuerzeug", "Taschenlampe", "Trinkflasche", "Rucksack", "Trainer", "Jacke / Windstopper / Regenjacke", "Besteck / Teller", "Schlafsack"]
-	if "strand" in aktivitaeten:
-		items ["strand"] = ["Badetuch", neue_reise["reisedauer_in_tagen"] + "x Bikini / Badehose", "Sonnenbrille", "Strandtuch", "Sonnencreme", "Flipflops", "Tasche", "Buch / Spiel", "Lockere Kleidung"]
-	if "nachtessen" in aktivitaeten:
-		items ["nachtessen"] = ["Hemd", "Kleid", "Schöne Schuhe", "Schmuck", "Uhr", "Mantel"]
-	if "fitness" in aktivitaeten:
-		items ["fitness"] = ["Sporthose", "Sportshirt", "Sportschuhe", "Trinkflasche", "Sporttuch", neue_reise["reisedauer_in_tagen"] + "x Sportsocken", "Kopfhörer"]
-	if "fotografie" in aktivitaeten:
-		items ["fotografie"] = ["Kamera", "Speicherkarte", "Fototasche", "Ladegerät", "Kamera Linsen", "Putztzch für Kamera", "Stativ"]
-	if "bformal" in aktivitaeten:
-		items ["bformal"] = ["Anzug", "Hemd", "Anzugshose", "Anzugsschuhe", "Mantel", "Aktentasche", "Schmuck / Uhr", "Laptop & Ladegerät"]
-	if "arbeit" in aktivitaeten: 
-		items ["arbeit"] = ["Dokumente", "Schreibzeug", "Aktentasche", "Laptop & Ladegerät", "Kreditkarten", "Visitenkarten", "Notizpapier"]
-	if "international" in aktivitaeten: 
-		items ["international"] = ["Visa", "Adapter", "Wörterbuch", "wichtigsten App herunterladen", "offline Karte auf Handy speichern"]
+	if "Joggen" in aktivitaeten:
+		items["Joggen"] = ["Laufschuhe", "Laufhosen", "Lauf Shirt", "Jacke / Windstopper", "Trinkflasche", "Sporttuch"]
+	if "Wandern" in aktivitaeten:
+		items["Wandern"] = ["Wanderschuhe", "Wanderhose", "Wander Shirt", neue_reise["reisedauer_in_tagen"] + "x Wandersocken", "Jacke / Windstopper", "Mütze / Stirnband", "Trinkflasche", "Rucksack", "erste Hilfe Ausrüstung", "Taschenlampe"]
+	if "Biken" in aktivitaeten:
+		items["Biken"] = ["Bikehose / Bikeshirt", "Bikeschuhe", "Bike / Ort zum Mieten raussuchen", "Trinkflasche", "Bike Handschuhe", "Rucksack", "Sportbrille"]
+	if "Camping" in aktivitaeten:
+		items ["Camping"] = ["Zelt", "Schlafmatte", "Feuerzeug", "Taschenlampe", "Trinkflasche", "Rucksack", "Trainer", "Jacke / Windstopper / Regenjacke", "Besteck / Teller", "Schlafsack"]
+	if "Strand" in aktivitaeten:
+		items ["Strand"] = ["Badetuch", neue_reise["reisedauer_in_tagen"] + "x Bikini / Badehose", "Sonnenbrille", "Strandtuch", "Sonnencreme", "Flipflops", "Tasche", "Buch / Spiel", "Lockere Kleidung"]
+	if "Nachtessen" in aktivitaeten:
+		items ["Nachtessen"] = ["Hemd", "Kleid", "Schöne Schuhe", "Schmuck", "Uhr", "Mantel"]
+	if "Fitness" in aktivitaeten:
+		items ["Fitness"] = ["Sporthose", "Sportshirt", "Sportschuhe", "Trinkflasche", "Sporttuch", neue_reise["reisedauer_in_tagen"] + "x Sportsocken", "Kopfhörer"]
+	if "Fotografie" in aktivitaeten:
+		items ["Fotografie"] = ["Kamera", "Speicherkarte", "Fototasche", "Ladegerät", "Kamera Linsen", "Putztzch für Kamera", "Stativ"]
+	if "Business Formal" in aktivitaeten:
+		items ["Business Formal"] = ["Anzug", "Hemd", "Anzugshose", "Anzugsschuhe", "Mantel", "Aktentasche", "Schmuck / Uhr", "Laptop & Ladegerät"]
+	if "Arbeit" in aktivitaeten: 
+		items ["Arbeit"] = ["Dokumente", "Schreibzeug", "Aktentasche", "Laptop & Ladegerät", "Kreditkarten", "Visitenkarten", "Notizpapier"]
+	if "International" in aktivitaeten: 
+		items ["International"] = ["Visa", "Adapter", "Wörterbuch", "wichtigsten App herunterladen", "offline Karte auf Handy speichern"]
 
 	# "Trip Speichern" löst POST request aus
 	if request.method == "POST":
@@ -112,5 +114,9 @@ def gespeicherte_trips():
   meine_trips = lade_daten_aus_json("backpacker.json")
   return render_template("gespeicherte_trips.html", trips = meine_trips)
 
+
+  
+
 if __name__ == "__main__":
 	app.run(debug=True, port=5000)
+

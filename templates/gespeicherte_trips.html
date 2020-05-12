@@ -3,24 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Startseite</title>
+    <title>gespeicherte_trips</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/jquery-3.4.1.slim.min.js')}}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/popper.min.js')}}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+    <title>Vacaymode</title>
     <style type="text/css">
-    .aktivitäten {
-      list-style-type: none !important;
-      padding: 0;
-    }
+      .aktivitäten {
+        list-style-type: none !important;
+        padding: 0;
+      }
+
+      .card {
+        float: left;
+      }
     </style>
-    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light "style="background-color: #e3f2fd;">
       <a class="navbar-brand text-info" href="http://127.0.0.1:5000/start/">
-        <img src="{{ url_for('static', filename='pictures/bag.png')}}
-      " width="40" height="40" class="d-inline-block align-center" alt="bag" href="#">Bagpacker</a>
+      <img src="{{ url_for('static', filename='pictures/bag.png')}}" width="40" height="40" class="d-inline-block align-center" alt="bag" href="#">Bagpacker</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
@@ -36,36 +39,18 @@
         </ul>
       </div>
     </nav>
-    <!-- End of navigation -->
-    <form method="POST">
-      <div class="w-auto p-2" style="background-color: #D6E1FE;">
-        <h4 class="m-4 text-center">Aktivitäten</h4>
+    {% for trip in trips %}
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{trip["ort"]}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{trip["art_der_reise"]}} - {{trip["tag"]}} {{trip["monat"]}}</h6>
+          <ul>
+            {% for element in trip["packliste"] %}
+            <li>{{element}}</li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
-      <div class="form-group m-4 ">
-        <ul class="aktivitäten">
-          <li>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="Business Formal" value="Business Formal" name="aktivität">
-              <label class="custom-control-label" for="Business Formal">Business Formal</label>
-            </div>
-          </li>
-          <li>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="Arbeit" value="Arbeit" name="aktivität">
-              <label class="custom-control-label" for="Arbeit">Arbeit</label>
-            </div>
-          </li>
-          <li>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="International" value="International" name="aktivität">
-              <label class="custom-control-label" for="International">International</label>
-            </div>
-          </li>
-        </ul>
-      </div>
-    <button type="submit" class="btn btn-primary ml-4">Beginne zu packen -></button>
-      
-    </form>
-    
+    {% endfor %}
   </body>
 </html>

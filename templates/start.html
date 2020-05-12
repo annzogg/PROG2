@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-light "style="background-color: #e3f2fd;">
       <a class="navbar-brand text-info" href="http://127.0.0.1:5000/start/">
         <img src="{{ url_for('static', filename='pictures/bag.png')}}
-      " width="40" height="40" class="d-inline-block align-center" alt="bag" href="#">Bagpacker</a>
+      " width="40" height="40" class="d-inline-block" alt="bag">Bagpacker</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,10 +33,10 @@
     <!-- End of navigation -->
     <form method="POST">
       <div class="form-group">
-        <div class="w-auto p-2" style="background-color: #D6E1FE;">
+        <div class="w-auto p-2 text-center " style="background-color: #D6E1FE;">
           <div class="container d-inline-block m-2 h5">Ortschaft</div>
         </div>
-        <div class="input-group input-group-lg">
+        <div class="input-group input-group-lg p-4">
           <div class="input-group-prepend">
             <span class="input-group-text" style="background-color: #D6E1FE;" id="inputGroup-sizing-lg">Ort</span>
           </div>
@@ -44,13 +44,13 @@
         </div>
       </div>
       <div class="form-group">
-        <div class="w-auto p-2" style="background-color: #D6E1FE;">
-          <div class="container d-inline-block m-2 pt-3 h5">Datum der Reise</div>
+        <div class="w-auto p-2 text-center " style="background-color: #D6E1FE;">
+          <div class="container d-inline-block m-2 h5">Datum der Reise</div>
         </div>
-        <label for="tag">Tag</label>
         
-        <div class="input-group mb-auto">
-          <div class="input-group-prepend">
+        <div class="input-group mr-auto p-4">
+          <label for="tag" >Tag</label>
+          <div class="input-group-prepend pl-4">
             <select class="custom-select" id="tag" name="tag">
               <option selected value="1">1</option>
               <option value="2">2</option>
@@ -85,8 +85,8 @@
               <option value="31">31</option>
             </select>
           </div>
-        </div>
-        <label for="monat">Monat</label>
+        
+        <label for="monat" class="pl-5 pr-4">Monat</label>
         <select class="custom-select" name="monat">
           <option selected value="Januar">Januar</option>
           <option value="Februar">Februar</option>
@@ -102,12 +102,14 @@
           <option value="Dezember">Dezember</option>
         </select>
       </div>
+      </div>
+
       <div class="form-group">
-        <div class="w-auto p-2" style="background-color: #D6E1FE;">
-          <div class="container d-inline-block m-2 pt-3 h5">Länge der Reise</div>
+        <div class="w-auto p-2 text-center " style="background-color: #D6E1FE;">
+          <div class="container d-inline-block m-2 h5">Länge der Reise</div>
         </div>
-        <div class="w-auto p-2" style="background-color: #D6E1FE;">
-          <label for="monat">Anzahl Tage</label>
+        <div class="input-group mr-auto p-4" >
+          <label for="monat" class="pr-4">Anzahl Tage</label>
           <select class="custom-select" name="reisedauer_in_tagen">
             {% for i in range(1, 22): %}
               <option value="{{i}}">{{i}}</option>
@@ -116,13 +118,19 @@
         </div>
       </div>
       <div class="form-group">
-        <div class="container d-inline-block m-2 pt-3 h5">Art der Reise</div>
+        <div class="w-auto p-2 text-center" style="background-color: #D6E1FE;">
+          <div class="container d-inline-block m-2 h5">Art der Reise</div> 
+        </div>
+        <div class="p-4">
         <select class="custom-select" name="art_der_reise">
           <option selected value="urlaub">Urlaub</option>
           <option value="business">Business</option>
         </select>
+        </div>
       </div>
-      <button type="submit" class="btn btn-primary mb-2">Wähle deine Aktivität aus -></button>
+      <div class="text-center">
+      <button type="submit" class="btn btn-primary mb-4">Wähle deine Aktivität aus -></button>
+    </div>
     </form>
     
     
