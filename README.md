@@ -36,5 +36,5 @@ Als Datenspeicherung wird eine JSON Datei verwendet
 * Packliste mit den bereits gepackten Sachen
 
 # Szenaorios 
-[scenarios](../scenarios/scenarios.png)
+[scenarios](../blob/master/scenarios/scenarios.png)
 
