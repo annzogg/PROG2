@@ -36,5 +36,5 @@ Als Datenspeicherung wird eine JSON Datei verwendet
 * Packliste mit den bereits gepackten Sachen
 
 # Szenaorios 
-[scenarios](../blob/master/scenarios/scenarios.png)
+[scenarios](https://github.com/annzogg/PROG2/blob/master/scenarios/scenarios.png)
 
