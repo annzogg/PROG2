@@ -1,34 +1,40 @@
-<!DOCTYPE html>
-<html lang="de">
-    <head>
-        <meta charset="utf-8">
-        <titel>Projektvorschlag</titel>
-        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-    </head>
-    <body>
-        <h1>Bag Packer - Projektidee</h1>
-        
-<h2>Ausgangslage</h2>
-        <p>Es kennt wohl jeder: Man geht in die Ferien und hat bestimmt noch etwas vergessen, was nun nachgekauft werden muss und damit nur unnötig Geld ausgegeben wird. Ebenfalls wurde das Wetter nicht bereits im Vorhinein angeschaut</p>
+## Bagpacker - Projektidee
+
+# Ausgangslage
+Es kennt wohl jeder: Man geht in die Ferien und hat bestimmt noch etwas vergessen, was nun nachgekauft werden muss und damit nur unnötig Geld ausgegeben wird. Dies sollte mit meiner App vermieden werden. 
 
 
-<h2>Ideevorschlag: </h2>
-        <p> Die App "Bag Packer" stellt anhand der, von der Person ausgewählten Kriterien, eine Liste der Dinge zusammen, die im Urlaub nicht vergessen werden sollten und auf jeden Fall in den Koffer/Rucksack müssen. Die Grundausstattung für das Gespäck wird zurückgegeben wird.</p>
+# Ideevorschlag
+Die App "Bag Packer" stellt anhand der, von der Person ausgewählten Kriterien, eine Liste der Dinge zusammen, die im Urlaub nicht vergessen werden sollten und auf jeden Fall in den Koffer/Rucksack müssen. Die Grundausstattung für das Gepäck wird zurückgegeben und die ausgewählten Aktivitäten berücksichtigt. Danach kann die Reise mit all den Dingen, die bereits gepackt wurden, gespeichert werden. 
 
-<p>Enthaltene Auswahlkritierien in der App: </p>
-    	<ul>
-            <li>Reiseort</li>
-    	    <li>Dauer der Reise</li>   
-    	    <li>Geschäftlich oder Urlaub</li> 
-    <br>
-    	<p>Datenverarbeitung</p>
-    	<ul>
-            <li>Berücksichtigung der Aktivitäten</li>
-    </ul>
-    <br>
-    	<p>Ausgabe</p> 
-    	<ul>
-    		<li>Packliste mit den berücksichtigten Aktivitätskriterien</li>
-</ul>    
-    </body>
-</html>
+# Enthaltene Auswahlkritierien in der App
+
+* Reiseort
+* Datum der Reise
+* Dauer der Reise
+* Geschäftlich oder Urlaub
+* Aktivitäten
+
+# Workflow 
+* Zu Beginn gibt der Nutzer den Reiseort, Reisedaten, Zeitdauer der Reise sowie Urlaub oder Geschäftlich an. 
+* Aufgrund der Auswahl Urlaub oder Geschäftlich kann er die gewünschten Zusätze der Art der Reise / Aktivitäten auswählen 
+* Daraus resultiert eine Packliste mit den Basics und den ausgewählten Aktivitäten, wobei die Anzahl Tag berücksichtig wurden
+* Schlussendlich kann er die Sachen packen und abhacken. Die abgehackten Dinge werden zusammen mit dem Reiseort und Datum gespeichert
+
+
+# Datenverarbeitung
+Als Datenspeicherung wird eine JSON Datei verwendet
+
+* Berechnung Anzahl Packsachen für die Dauer der Reise
+* Berücksichtigung der Aktivitäten
+* Neue Artikel hinzufügen 
+* Angecklickte (gepackte) Sachen speichern
+* Reise speichern 
+
+# Ausgabe
+* Packliste aufgrund der Auswahlkriterien der Aktivitäten
+* Packliste mit den bereits gepackten Sachen
+
+# Szenaorios 
+[scenarios](../scenarios/scenarios.png)
+
