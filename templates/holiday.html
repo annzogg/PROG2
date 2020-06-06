@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Startseite</title>
+    <title>Ferien</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/jquery-3.4.1.slim.min.js')}}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/popper.min.js')}}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
-    <title>Vacaymode</title>
     <style type="text/css">
-    .aktivitäten {
+    .aktivitaeten {
+      
     list-style-type: none !important;
     padding: 0;
     }
@@ -31,6 +31,9 @@
           <li class="nav-item active">
             <a class="nav-link" href="http://127.0.0.1:5000/gespeicherte_trips/">Gespeicherte Trips <span class="sr-only">(current)</span></a>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:5000/analyse/">Analyse<span class="sr-only">(current)</span></a>
+          </li>
           
         </ul>
       </div>
@@ -41,53 +44,53 @@
         <h4 class="m-4 text-center">Aktivitäten</h4>
       </div>
       <div class="form-group p-4">
-        <ul class="aktivitäten">
+        <ul class="aktivitaeten">
           <li>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="Wandern" value="Wandern" name="aktivität">
+              <input type="checkbox" class="custom-control-input" id="Wandern" value="Wandern" name="aktivitaet">
               <label class="custom-control-label" for="Wandern">Wandern</label>
               
             </div>
           </li>
           <li>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="Joggen" value="Joggen" name="aktivität">
+              <input type="checkbox" class="custom-control-input" id="Joggen" value="Joggen" name="aktivitaet">
               <label class="custom-control-label" for="Joggen">Joggen</label>
             </div>
           </li>
           <li>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="Biken" value="Biken" name="aktivität">
+              <input type="checkbox" class="custom-control-input" id="Biken" value="Biken" name="aktivitaet">
               <label class="custom-control-label" for="Biken">Biken</label>
             </div>
           </li>
           <li>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="Camping" value="Camping" name="aktivität">
+              <input type="checkbox" class="custom-control-input" id="Camping" value="Camping" name="aktivitaet">
               <label class="custom-control-label" for="Camping">Camping</label>
             </div>
           </li>
           <li>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="Strand" value="Strand" name="aktivität">
+              <input type="checkbox" class="custom-control-input" id="Strand" value="Strand" name="aktivitaet">
               <label class="custom-control-label" for="Strand">Strand</label>
             </div>
           </li>
           <li>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="Nachtessen" value="Nachtessen" name="aktivität">
+              <input type="checkbox" class="custom-control-input" id="Nachtessen" value="Nachtessen" name="aktivitaet">
               <label class="custom-control-label" for="Nachtessen">Nachtessen</label>
             </div>
           </li>
           <li>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="Fitness" value="Fitness" name="aktivität">
+              <input type="checkbox" class="custom-control-input" id="Fitness" value="Fitness" name="aktivitaet">
               <label class="custom-control-label" for="Fitness">Fitness</label>
             </div>
           </li>
           <li>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="Fotografie" value="Fotografie" name="aktivität">
+              <input type="checkbox" class="custom-control-input" id="Fotografie" value="Fotografie" name="aktivitaet">
               <label class="custom-control-label" for="Fotografie">Fotografie</label>
             </div>
           </li>
