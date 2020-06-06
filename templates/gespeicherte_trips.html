@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gespeicherte_trips</title>
+    <title>Gespeicherte trips</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/jquery-3.4.1.slim.min.js')}}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/popper.min.js')}}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
-    <title>Vacaymode</title>
-    <style type="text/css">
-      .aktivitäten {
-        list-style-type: none !important;
-        padding: 0;
-      }
 
-      .card {
-        float: left;
-      }
+    <!-- aufzählungspünkte verschwinden lassen -->
+    <style type="text/css">
+    .aktivitäten {
+    list-style-type: none !important;
+    padding: 0;
+    }
+    .card {
+    float: left;
+    }
     </style>
   </head>
   <body>
@@ -35,22 +35,30 @@
           <li class="nav-item active">
             <a class="nav-link" href="http://127.0.0.1:5000/gespeicherte_trips/">Gespeicherte Trips <span class="sr-only">(current)</span></a>
           </li>
+          <li class="nav-item active">
+                        <a class="nav-link" href="http://127.0.0.1:5000/analyse/">Analyse<span class="sr-only">(current)</span></a>
+                    </li>
           
         </ul>
       </div>
     </nav>
     {% for trip in trips %}
+    <div>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">{{trip["ort"]}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{trip["art_der_reise"]}} - {{trip["tag"]}} {{trip["monat"]}}</h6>
           <ul>
             {% for element in trip["packliste"] %}
-            <li>{{element}}</li>
+              <li>{{element}}</li>
             {% endfor %}
           </ul>
         </div>
       </div>
     {% endfor %}
+    </div>
+   
+  
+
   </body>
 </html>
