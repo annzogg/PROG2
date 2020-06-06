@@ -37,4 +37,7 @@ Als Datenspeicherung wird eine JSON Datei verwendet
 
 ### Szenaorios 
 [scenarios](https://github.com/annzogg/PROG2/blob/master/scenarios/scenarios.png)
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/master
