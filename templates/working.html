@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Startseite</title>
+    <title>working</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/jquery-3.4.1.slim.min.js')}}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/popper.min.js')}}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
     <style type="text/css">
-    .aktivitäten {
+    .aktivitaeten {
       list-style-type: none !important;
       padding: 0;
     }
@@ -32,6 +32,9 @@
           <li class="nav-item active">
             <a class="nav-link" href="http://127.0.0.1:5000/gespeicherte_trips/">Gespeicherte Trips <span class="sr-only">(current)</span></a>
           </li>
+                    <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:5000/analyse/">Analyse<span class="sr-only">(current)</span></a>
+          </li>
           
         </ul>
       </div>
@@ -42,22 +45,22 @@
         <h4 class="m-4 text-center">Aktivitäten</h4>
       </div>
       <div class="form-group m-4 ">
-        <ul class="aktivitäten">
+        <ul class="aktivitaeten">
           <li>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="Business Formal" value="Business Formal" name="aktivität">
+              <input type="checkbox" class="custom-control-input" id="Business Formal" value="Business Formal" name="aktivitaet">
               <label class="custom-control-label" for="Business Formal">Business Formal</label>
             </div>
           </li>
           <li>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="Arbeit" value="Arbeit" name="aktivität">
+              <input type="checkbox" class="custom-control-input" id="Arbeit" value="Arbeit" name="aktivitaet">
               <label class="custom-control-label" for="Arbeit">Arbeit</label>
             </div>
           </li>
           <li>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="International" value="International" name="aktivität">
+              <input type="checkbox" class="custom-control-input" id="International" value="International" name="aktivitaet">
               <label class="custom-control-label" for="International">International</label>
             </div>
           </li>
