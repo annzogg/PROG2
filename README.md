@@ -30,10 +30,12 @@ Als Datenspeicherung wird eine JSON Datei verwendet
 * Neue Artikel hinzufügen 
 * Angecklickte (gepackte) Sachen speichern
 * Reise speichern 
+* Statistik mit Berücksichtigung der gepackten Artikel
 
 ### Ausgabe
 * Packliste aufgrund der Auswahlkriterien der Aktivitäten
 * Packliste mit den bereits gepackten Sachen
+* Statistik mit Übersicht, welche fünf Artikel am Meisten gepackt wurden 
 
 ### Szenaorios 
 [scenarios](https://github.com/annzogg/PROG2/blob/master/scenarios/scenarios.png)
