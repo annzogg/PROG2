@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Startseite</title>
+        <title>Result</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
         <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/jquery-3.4.1.slim.min.js')}}"></script>
         <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/popper.min.js')}}"></script>
@@ -24,11 +24,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="http://127.0.0.1:5000/gespeicherte_trips/">Gespeicherte Trips</a>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="http://127.0.0.1:5000/analyse/">Analyse<span class="sr-only">(current)</span></a>
+                    </li>
                     
                 </ul>
             </div>
         </nav>
-        <h1 class="results m-4"> Deine persönliche Packliste: </h1>
+        <h1 class="results m-4">Deine persönliche Packliste: </h1>
         
         <form method="POST">
             <div class="form-group">
