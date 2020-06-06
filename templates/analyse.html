@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analyse</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+  <script type="text/javascript"
+    src="{{ url_for('static', filename='bootstrap/js/jquery-3.4.1.slim.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/popper.min.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+  <style type="text/css">
+    .aktivitaeten {
+      list-style-type: none !important;
+      padding: 0;
+    }
+
+    .chart-container {
+      position: relative;
+      flex-grow: 1;
+      min-height: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fd;">
+    <a class="navbar-brand text-info" href="http://127.0.0.1:5000/start/">
+      <img src="{{ url_for('static', filename='pictures/bag.png')}}" width="40" height="40"
+        class="d-inline-block align-center" alt="bag" href="#">Bagpacker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://127.0.0.1:5000/start/">Neuer Trip <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="http://127.0.0.1:5000/gespeicherte_trips/">Gespeicherte Trips <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="http://127.0.0.1:5000/analyse/">Analyse<span class="sr-only">(current)</span></a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <!-- End of navigation -->
+  <!-- start statistic -->
+  <div class="container">
+    <div class="row">
+      <canvas id="myChart" style="position: relative; height:60vh; width:80vw"></canvas>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+  <script>
+    fetch('/analyse/data').then(response => {
+      return response.json();
+    })
+      .then(jsondata => {
+
+        const labels = Object.keys(jsondata)
+        const data = Object.values(jsondata)
+        console.log(data)
+
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var config = {
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets: [{
+              label: 'Packed Quantity',
+              data: data,
+              backgroundColor: 'rgba(0, 119, 204, 0.3)'
+            }],
+          },
+
+          responsive: true,
+          maintainAspectRatio: false,
+          options: {
+            title: {
+              display: true,
+              text: 'Most Packed Items Data',
+              fontSize: 18
+            }
+          }
+        };
+
+        var chart = new Chart(ctx, config);
+      })
+
+  </script>
+  <!-- End statistic -->
+
+</body>
+
+</html>
