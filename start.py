@@ -139,7 +139,7 @@ def get_items(elements, items):
         return items
 
 def get_items_count(elements, items):
-        # We return a list which holds the count for each item given (we assume they are already unique)
+    # We return a list which holds the count for each item given (we assume they are already unique)
         counts = []
         for item in items:
             current_item_count = None
@@ -149,6 +149,10 @@ def get_items_count(elements, items):
             counts.append(current_item_count)
         return counts
 
+@app.route("/analyse/", methods=["GET", "POST"])
+def analyse():
+    return render_template("analyse.html")
+
 @app.route("/analyse/data", methods=["GET", "POST"])
 def process_analyse():
     # Variable that will container the json data from file
@@ -157,14 +161,15 @@ def process_analyse():
     # Open file and set json data to backpacker
     with open('backpacker.json') as json_file:
         backpacker = json.load(json_file)
-    
+
     # Get packliste in json data and store in new list
     default_dict = defaultdict(int)
     packliste_in_json = []
     for item in backpacker:
         packliste_in_json.append(item["packliste"])
 
-    #Transform each list in a set to avoid false positives like [[1,1],[2,2]]
+
+    # Transform each list in a set to avoid false positives like [[1,1],[2,2]]
     for packlist in packliste_in_json:
         packliste_set = set(packlist)
         for v in packliste_set:
@@ -175,7 +180,7 @@ def process_analyse():
     for value,number in default_dict.items():
         if number > 1:
             chart_dict[value] = number
-    
+
     # Creates a list of tuples containing sorted values in descending order (Biggest to smallest) 
     sorted_highest = sorted(chart_dict.items(), key=lambda x: x[1], reverse=True)
 
@@ -183,12 +188,9 @@ def process_analyse():
 
     # Get the first 5 items with highest occurence
     highest_occured_items = dict(islice(sorted_to_dict.items(), 5))
-    
+
     return jsonify(highest_occured_items)
 
-@app.route("/analyse/", methods=["GET", "POST"])
-def analyse():
-    return render_template("analyse.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
